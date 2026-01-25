@@ -38,9 +38,6 @@ return new class extends Migration
             $table->string('email')->unique();
             $table->string('phone');
             $table->foreignId('status_id')->constrained('status');
-            $table->foreignId('created_by')->constrained('users');
-            $table->foreignId('updated_by')->nullable()->constrained('users');
-            $table->foreignId('deleted_by')->nullable()->constrained('users');
             $table->timestamps();
             $table->softDeletes();
         });

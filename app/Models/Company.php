@@ -9,10 +9,13 @@ class Company extends Model
 {
     protected $fillable = [
         'name',
-        'ruc',
-        'address',
+        'trade_name',
+        'company_type_id',
+        'legal_type_id',
+        'legal_code',
         'email',
-        'phone'
+        'phone',
+        'status_id',
     ];
 
     protected static function booted()
